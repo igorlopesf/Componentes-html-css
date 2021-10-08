@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #222222;
+        color: #111111;
+        font-family: "Dosis", sans-serif;
+        margin: 0;
+      }
+      button {
+        border-radius: 50px;
+        padding: 10px 32px;
+        font-size: 16px;
+        margin: 10px;
+        transition: 0.3s ease-in-out;
+      }
+
+      .btn-flutuante {
+        color: #f8f8f8;
+        background: #634ecc;
+        border: 2px solid #634eccdb;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        -webkit-animation: slide 2s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+          infinite alternate-reverse both;
+        animation: slide 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
+          alternate-reverse both;
+        z-index: 10;
+      }
+      .btn-flutuante:hover {
+        color: #f8f8f8;
+        background: #2a249a;
+        border-color: #2a249a;
+        box-shadow: 0 0 0 8px #2a249a5a;
+      }
+
+      @-webkit-keyframes slide {
+        0% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        100% {
+          -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Olá! Eu sou o background!</h1>
+
+    <button class="btn-flutuante">+ Solicitação</button>
+  </body>
+</html>
