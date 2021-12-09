@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .carousel {
+            width: 100%;
+        }
+
+        .carousel .slide {
+            padding: 200px 350px 200px 200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sld1 {
+            background: url("https://algoritmux.com/wp-content/uploads/2021/12/banner.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .sld2 {
+            background: url("https://algoritmux.com/wp-content/uploads/2021/12/banner.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .sld3 {
+            background: url("https://algoritmux.com/wp-content/uploads/2021/12/banner.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .description {
+            width: 450px;
+            float: right;
+        }
+
+        .btns {
+            display: flex;
+
+        }
+
+        .btns a {
+            text-decoration: none;
+        }
+
+        .btns button {
+            display: flex;
+            width: 220px;
+            height: 50px;
+            border-radius: 5px;
+            background-color: #2699FB;
+            border-style: none;
+            color: white;
+            align-items: center;
+            justify-content: space-around;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .slick-dots li button:before {
+            font-size: 20px;
+            margin-top: 5px;
+        }
+
+        #btn-whatsapp:hover {
+            transition: all 0.5s ease;
+            background-color: #05589F;
+        }
+        .product-img img {
+            width: 700px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="carousel">
+        <div class="slide sld1">
+
+            <div class="product-img">
+                <img src="https://algoritmux.com/wp-content/uploads/2021/11/barco1.png" alt="">
+            </div>
+
+            <div class="description" style="color: #2699FB;">
+                <h1>Excepteur sint occaeuiecat cupidatat.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in uienply
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat norin
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <div class="btns">
+                    <a href=""><button id="mais" style="width: 150px; background-color: white; color: #2699FB;"><strong>SAIBA
+                                MAIS</strong></button></a>
+
+                    <a href=""><button id="btn-whatsapp"><img
+                                src="https://algoritmux.com/wp-content/uploads/2021/11/Imagem-23.png"
+                                alt=""><strong>ENTRAR EM CONTATO</strong></button></a>
+                </div>
+            </div>
+        </div>
+        <div class="slide sld2">
+            <div class="product-img">
+                <img src="https://algoritmux.com/wp-content/uploads/2021/11/barco2.png" alt="">
+            </div>
+            <div class="description" style="color: #2699FB;">
+                <h1>Excepteur sint occaeuiecat cupidatat.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in uienply
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat norin
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <div class="btns">
+                    <a href=""><button style="width: 150px; background-color: white; color: #2699FB;"><strong>SAIBA
+                                MAIS</strong></button></a>
+
+                    <a href=""><button id="btn-whatsapp"><img
+                                src="https://algoritmux.com/wp-content/uploads/2021/11/Imagem-23.png"
+                                alt=""><strong>ENTRAR EM CONTATO</strong></button></a>
+                </div>
+            </div>
+        </div>
+        <div class="slide sld3">
+            <div class="product-img">
+                <img src="https://algoritmux.com/wp-content/uploads/2021/11/barco3.png" alt="">
+            </div>
+            <div class="description" style="color: #2699FB;">
+                <h1>Excepteur sint occaeuiecat cupidatat.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut ero
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in uienply
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat norin
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <div class="btns">
+                    <a href=""><button style="width: 150px; background-color: white; color: #2699FB;"><strong>SAIBA
+                                MAIS</strong></button></a>
+
+                    <a href=""><button id="btn-whatsapp"><img
+                                src="https://algoritmux.com/wp-content/uploads/2021/11/Imagem-23.png"
+                                alt=""><strong>ENTRAR EM CONTATO</strong></button></a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+
+    <script>
+        $('.carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            arrows: false,
+            accessibility: false,
+            autoplay: true, 
+            autoplaySpeed: 2000
+        });
+    </script>
+</body>
+
+</html>

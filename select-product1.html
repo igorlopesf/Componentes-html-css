@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
+    <style>
+        .carousel img {
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        .product-colors {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .product-colors ul {
+            margin: 0 auto;
+        }
+
+        .product-color-selector {
+            width: 100%;
+            float: left;
+            /* margin: 10px 0; */
+        }
+
+        .product-color-label {
+            float: left;
+            margin-top: 4px;
+        }
+
+        .product-colors {
+            /* float: left; */
+            padding: 0 0 18px 12px;
+            margin-bottom: 0;
+        }
+
+        .product-color {
+            height: 30px;
+            width: 30px;
+            background: #cccccc;
+            border-radius: 30px;
+            display: inline-block;
+            margin-right: 3px;
+            -webkit-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+
+        .product-color:hover {
+            cursor: pointer;
+        }
+
+        .product-color-black {
+            background: #A8D7FF;
+        }
+
+        .product-color-navy {
+            background: #2699FB;
+        }
+
+        .product-color-grey {
+            background: #05589F;
+        }
+
+        .product-color_active {
+            -webkit-box-shadow: 0px 5px 15px -4px rgba(0, 23, 31, 1);
+            -moz-box-shadow: 0px 5px 15px -4px rgba(0, 23, 31, 1);
+            box-shadow: 0px 5px 15px -4px rgba(0, 23, 31, 1);
+        }
+
+        .btn-contato {
+            /* width: 50%; */
+            margin: 0;
+        }
+
+        .btn-contato button {
+            display: flex;
+            width: 220px;
+            height: 50px;
+            border-radius: 5px;
+            background-color: #2699FB;
+            border-style: none;
+            color: white;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+
+        .btn-contato a {
+            text-decoration: none;
+        }
+
+        .info-preco {
+            /* width: 50%; */
+            margin: 0;
+        }
+
+        .btn-color {
+            display: flex;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+            width: 100vh;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        @media only screen and (max-width: 960px) {
+            .carousel img {
+                width: 80%;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .carousel img {
+                width: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 960px) {
+            .btn-color {
+                width: 60vh;
+            }
+        }
+
+        @media only screen and (max-width: 590px) {
+            .btn-color {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                margin-top: 20px;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="carousel">
+        <div><img src="https://algoritmux.com/wp-content/uploads/2021/11/barco1.png" alt="" /></div>
+        <div><img src="https://algoritmux.com/wp-content/uploads/2021/11/barco2.png" alt="java" /></div>
+        <div><img src="https://algoritmux.com/wp-content/uploads/2021/11/barco3.png" alt="python" /></div>
+
+    </div>
+
+    <div class="btn-color">
+        <div class="info-preco" style="color: #2699FB;">
+            A partir <br>
+            <strong style="font-size: 25px;">R$ 9.999,99*</strong><BR>
+            FRETE NÃO INCLUSO
+        </div>
+        <ul class="product-colors">
+            <li class="product-color product-color-black product-color_active" data-slide-index="1" id="cor1"></li>
+            <li class="product-color product-color-navy" data-slide-index="2" id="cor2"></li>
+            <li class="product-color product-color-grey" data-slide-index="3" id="cor3"></li>
+        </ul>
+        <div class="btn-contato">
+            <a href=""><button><img src="https://algoritmux.com/wp-content/uploads/2021/11/Imagem-23.png"
+                        alt=""><strong>ENTRAR EM CONTATO</strong></button></a>
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+
+    <script>
+        $('.carousel').slick({
+            dots: false,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            arrows: false,
+            accessibility: false
+        });
+        $('.product-color').on('click', function () {
+            if (!$(this).hasClass('product-color_active')) {
+                $(this).siblings().removeClass('product-color_active');
+                $(this).addClass('product-color_active');
+            };
+            var slideIndex = $(this).data('slide-index');
+            $('.carousel').slick('slickGoTo', slideIndex - 1);
+        });
+
+    </script>
+</body>
+
+</html>

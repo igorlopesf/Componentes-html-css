@@ -1,0 +1,192 @@
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Exo:wght@300&display=swap');
+
+        .flex-wrapper {
+            display: flex;
+            /* flex-flow: row nowrap; */
+            justify-content: center;
+            align-items: center;
+margin-top:80px;
+
+
+
+        }
+
+        @media only screen and (max-width: 720px) {
+            .flex-wrapper {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .single-chart {
+            /* width: 33%; */
+            justify-content: space-around;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+        }
+
+        .single-chart img {
+            position: relative;
+            width: 60px;
+            margin: 0 auto;
+            top: -180px;
+            left: -110px;
+            animation: float 2.1s infinite linear;
+        }
+
+        .single-chart .dcp {
+            position: relative;
+            max-width: 300px;
+            text-align: center;
+            margin: 0 auto;
+            top: -50px;
+            font-family: 'Exo', sans-serif;
+        }
+
+        .circular-chart {
+            display: block;
+            margin: 10px auto;
+            max-width: 80%;
+            max-height: 250px;
+            animation: float 2.1s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-7px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .circle-bg {
+            fill: none;
+            stroke: #eee;
+            stroke-width: 3.8;
+        }
+
+        .circle {
+            fill: none;
+            stroke-width: 2.8;
+            stroke-linecap: round;
+            animation: progress 1s ease-out forwards;
+        }
+
+        @keyframes progress {
+            0% {
+                stroke-dasharray: 0 100;
+            }
+        }
+
+        .circular-chart.orange .circle {
+            stroke: #ff9f00;
+        }
+
+        .circular-chart.green .circle {
+            stroke: #4CC790;
+        }
+
+        .circular-chart.blue .circle {
+            stroke: #3c9ee5;
+        }
+
+        .percentage {
+            fill: #666;
+            font-family: 'Exo', sans-serif;
+            font-size: 0.5em;
+            text-anchor: middle;
+        }
+
+        #shadow {
+            width: 100px;
+            height: 16px;
+            border-radius: 100%;
+            margin-top: 8px;
+            background-color: black;
+            opacity: .1;
+            animation: change-size 2.1s infinite linear;
+            margin: 0 auto;
+            position: relative;
+            top: -50px;
+        }
+
+        @keyframes change-size {
+        50% {
+            transform: scaleX(.8);
+        }
+    }
+    </style>
+
+
+
+    <div class="flex-wrapper">
+        <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart orange">
+                <path class="circle-bg" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                <path class="circle" stroke-dasharray="84, 100" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                <text x="18" y="20.35" class="percentage">84%</text>
+            </svg>
+            <img src="https://algoritmux.com/wp-content/uploads/2021/11/Grupo-14-1.png" alt="">
+            <div id="shadow"></div>
+            <div class="dcp">
+                <p>Acreditam não poder alcançar suas metas de crescimento sem<br> implementar ID.
+                </p>
+            </div>
+        </div>
+
+        <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart green">
+                <path class="circle-bg" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                <text x="18" y="20.35" class="percentage">75%</text>
+            </svg>
+            <img src="https://algoritmux.com/wp-content/uploads/2021/11/Layout-e-Design.png" alt="">
+            <div id="shadow"></div>
+            <div class="dcp">
+                <p>Acreditam que não estarão no mercado daqui a cinco anos se não<br> implementarem ID.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart blue">
+                <path class="circle-bg" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                <path class="circle" stroke-dasharray="63, 100" d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                <text x="18" y="20.35" class="percentage">63%</text>
+            </svg>
+            <img src="https://algoritmux.com/wp-content/uploads/2021/11/aplicativo-movel-3.png" alt="">
+            <div id="shadow"></div>
+            <div class="dcp">
+                <p>Sabe trabalhar com tecnologia, mas ainda luta para escalar a ID <br>nos negócios.
+
+                </p>
+            </div>
+        </div>
+    </div>
